@@ -19,3 +19,6 @@ tsconfig.tsbuildinfo
 
 # 로컬 환경변수
 .env.local
+
+# 배포 패키지 (빌드 산출물, 리포지토리 제외)
+dist/
