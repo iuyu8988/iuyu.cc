@@ -10,7 +10,9 @@
     "shots": "node scripts/screenshot.mjs",
     "typecheck": "tsc --noEmit",
     "qa": "node scripts/qa.mjs",
-    "photos": "python3 scripts/prepare-photos.py"
+    "photos": "python3 scripts/prepare-photos.py",
+    "deploy": "bash scripts/deploy.sh",
+    "ssl": "bash scripts/enable-ssl.sh"
   },
   "dependencies": {
     "next": "^14.2.15",
