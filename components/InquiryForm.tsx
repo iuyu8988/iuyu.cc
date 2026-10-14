@@ -208,7 +208,8 @@ export default function InquiryForm() {
           className="t-sm p-4 text-pretty ink-2"
           style={{ background: 'var(--accent-wash)', borderRadius: 2 }}
         >
-          {f.sentNote}
+          {/* 이메일 주소는 BRAND_FIXED 한 곳에서만 관리합니다 */}
+          {f.sentNote.replace('{EMAIL}', BRAND_FIXED.email)}
         </p>
       )}
     </form>

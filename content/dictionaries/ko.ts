@@ -422,9 +422,6 @@ const ko = {
       scopeBody:
         '실리콘 보호케이스 · 파우치 · 그립 · 기기 보호용 액세서리의 OEM/ODM 제조. 니코틴 액상·팟·리필·기기 완제품은 취급하지 않습니다.',
       capLabel: '보유 역량',
-      factoryLabel: '공장 정보',
-      factoryRows: ['소재지', '생산 면적', '사출 설비'],
-      factoryNote: '※ 공장 정보는 placeholder 입니다. 실제 주소·면적·설비 대수로 교체해 주세요.',
       bizH2: '사업자 정보',
       bizRows: [
         ['상호', 'companyKo'],
@@ -434,7 +431,6 @@ const ko = {
         ['본사 · 공장', 'address'],
         ['사무소', 'addressOffice'],
         ['영업 문의', 'email'],
-        ['기술 문의', 'emailTech'],
         ['전화', 'tel'],
         ['업무 시간', 'hours'],
       ],
@@ -450,8 +446,10 @@ const ko = {
       formH2: '문의 양식',
       formNote: '표시된 항목은 필수입니다. 나머지는 아는 범위까지만 적어주셔도 됩니다.',
       directLabel: '직접 연락',
+      whatsappLabel: 'WhatsApp',
+      whatsappCta: 'WhatsApp 으로 문의',
       salesLabel: '영업 · 견적',
-      techLabel: '기술 · 설계',
+      emailLabel: '이메일',
       telLabel: '전화',
       hoursLabel: '업무 시간',
       prepLabel: '준비하시면 좋은 것',
@@ -490,7 +488,7 @@ const ko = {
     submit: '문의 보내기',
     replyNote: '통상 1–2 영업일 내 회신',
     requiredError: '필수 항목을 모두 입력해 주세요.',
-    sentNote: '메일 앱이 열리지 않으면 sales@iuyu.cc 로 직접 보내주세요. 폼 전송 백엔드는 배포 시 연결됩니다.',
+    sentNote: '메일 앱이 열리지 않으면 {EMAIL} 로 직접 보내주세요. 폼 전송 백엔드는 배포 시 연결됩니다.',
     mailSubjectPrefix: '[IUYU] 견적 문의 — ',
     labels: {
       company: '회사명',
@@ -528,6 +526,7 @@ const ko = {
     mobileSub: '기기 모델만 알려주시면 검토해 드립니다',
     mobileCta: '문의하기',
     desktopCta: '견적 문의',
+    whatsapp: 'WhatsApp 으로 문의',
   },
 
   legal: {

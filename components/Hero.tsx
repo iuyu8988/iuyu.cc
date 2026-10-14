@@ -106,7 +106,6 @@ export default function Hero() {
         >
           <div className="flex flex-wrap items-center gap-x-6 gap-y-1.5">
             <span className="t-note" style={{ color: 'var(--accent)' }}>SHEET 01 / 08</span>
-            <span className="t-note hidden sm:inline">REV. {BRAND_FIXED.since}</span>
             <span className="t-note hidden md:inline">SCALE 1:1</span>
           </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-1.5">

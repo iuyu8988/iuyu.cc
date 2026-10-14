@@ -1,0 +1,29 @@
+# ============================================================================
+# iuyu.cc — Hostinger (LiteSpeed / Apache)
+# Next.js 정적 export 산출물. public_html 에 그대로 업로드합니다.
+# 이 파일은 public/ 에 있어야 빌드 시 out/ 으로 자동 복사됩니다.
+#
+# 원칙: '없으면 사이트가 깨지는 것'만 남깁니다.
+#   캐시 · 압축 · 보안 헤더는 hPanel 의 성능 기능이 더 안전하게 처리합니다.
+#   (초기 버전에서 <FilesMatch>+Header 조합이 _next 경로에서 500 을 유발했습니다)
+# ============================================================================
+
+DirectoryIndex index.html
+Options -MultiViews -Indexes
+
+# 없는 경로 → 404 상태를 유지한 채 404.html 내용을 보여줍니다.
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # https 강제
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+    # www 제거 (canonical 을 무접두사로 잡았으므로)
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+</IfModule>

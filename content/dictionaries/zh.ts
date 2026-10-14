@@ -419,9 +419,6 @@ const zh: Dictionary = {
       scopeBody:
         '硅胶保护套 · 收纳袋 · 握把套 · 设备防护配件的 OEM/ODM 制造。不涉及尼古丁烟油、烟弹、补充装与设备整机。',
       capLabel: '自有能力',
-      factoryLabel: '工厂信息',
-      factoryRows: ['所在地', '生产面积', '注塑设备'],
-      factoryNote: '※ 工厂信息为占位内容，请替换为实际地址、面积与设备台数。',
       bizH2: '公司信息',
       bizRows: [
         ['商号（韩）', 'companyKo'],
@@ -431,7 +428,6 @@ const zh: Dictionary = {
         ['本社 · 工厂', 'address'],
         ['办事处', 'addressOffice'],
         ['业务咨询', 'email'],
-        ['技术咨询', 'emailTech'],
         ['电话', 'tel'],
         ['工作时间', 'hours'],
       ],
@@ -447,8 +443,10 @@ const zh: Dictionary = {
       formH2: '询价表单',
       formNote: '标注为必填的项目请完整填写，其余按您了解的填就好。',
       directLabel: '直接联系',
+      whatsappLabel: 'WhatsApp',
+      whatsappCta: '通过 WhatsApp 咨询',
       salesLabel: '业务 · 报价',
-      techLabel: '技术 · 设计',
+      emailLabel: '邮箱',
       telLabel: '电话',
       hoursLabel: '工作时间',
       prepLabel: '建议提前准备',
@@ -487,7 +485,7 @@ const zh: Dictionary = {
     submit: '发送咨询',
     replyNote: '通常在 1–2 个工作日内回复',
     requiredError: '请填写所有必填项目。',
-    sentNote: '如果邮件客户端没有打开，请直接发送至 sales@iuyu.cc。表单提交后端将在部署时接入。',
+    sentNote: '如果邮件客户端没有打开，请直接发送至 {EMAIL}。表单提交后端将在部署时接入。',
     mailSubjectPrefix: '[IUYU] 报价咨询 — ',
     labels: {
       company: '公司',
@@ -525,6 +523,7 @@ const zh: Dictionary = {
     mobileSub: '告知机型，我们即可评审',
     mobileCta: '立即咨询',
     desktopCta: '索取报价',
+    whatsapp: '通过 WhatsApp 咨询',
   },
 
   legal: {

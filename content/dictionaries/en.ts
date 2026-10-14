@@ -421,9 +421,6 @@ const en: Dictionary = {
       scopeBody:
         'OEM/ODM manufacturing of silicone protective cases, pouches, grips and device protection accessories. We do not handle nicotine liquid, pods, refills or finished devices.',
       capLabel: 'In-house capabilities',
-      factoryLabel: 'Factory information',
-      factoryRows: ['Location', 'Production area', 'Injection machines'],
-      factoryNote: 'Note: factory information is placeholder — replace with the real address, area and machine count.',
       bizH2: 'Company information',
       bizRows: [
         ['Company (KR)', 'companyKo'],
@@ -433,7 +430,6 @@ const en: Dictionary = {
         ['HQ / Factory', 'address'],
         ['Office', 'addressOffice'],
         ['Sales enquiries', 'email'],
-        ['Technical enquiries', 'emailTech'],
         ['Telephone', 'tel'],
         ['Business hours', 'hours'],
       ],
@@ -449,8 +445,10 @@ const en: Dictionary = {
       formH2: 'Enquiry form',
       formNote: 'Marked fields are required. Fill in the rest as far as you know.',
       directLabel: 'Direct contact',
+      whatsappLabel: 'WhatsApp',
+      whatsappCta: 'Chat on WhatsApp',
       salesLabel: 'Sales · quotes',
-      techLabel: 'Engineering · design',
+      emailLabel: 'Email',
       telLabel: 'Telephone',
       hoursLabel: 'Business hours',
       prepLabel: 'Helpful to prepare',
@@ -489,7 +487,7 @@ const en: Dictionary = {
     submit: 'Send enquiry',
     replyNote: 'Usually within 1–2 business days',
     requiredError: 'Please complete all required fields.',
-    sentNote: 'If your mail client does not open, please email sales@iuyu.cc directly. The form backend is connected at deployment.',
+    sentNote: 'If your mail client does not open, please email {EMAIL} directly. The form backend is connected at deployment.',
     mailSubjectPrefix: '[IUYU] Quote enquiry — ',
     labels: {
       company: 'Company',
@@ -527,6 +525,7 @@ const en: Dictionary = {
     mobileSub: 'Send us the device model and we will review it',
     mobileCta: 'Enquire',
     desktopCta: 'Request a quote',
+    whatsapp: 'Chat on WhatsApp',
   },
 
   legal: {

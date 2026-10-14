@@ -1,4 +1,4 @@
-import { BRAND_FIXED, SITE_URL } from '@/content/brand';
+import { BRAND_FIXED, SITE_URL, whatsappLink } from '@/content/brand';
 import { LOCALE_META, type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/content/dictionaries';
 
@@ -17,19 +17,18 @@ export default function StructuredData({ locale }: { locale: Locale }) {
     '@type': ['Organization', 'Manufacturer'],
     '@id': orgId,
     name: BRAND_FIXED.name,
-    alternateName: `${BRAND_FIXED.nameKo} (${BRAND_FIXED.legal.companyEn})`,
+    alternateName: BRAND_FIXED.nameKo,
     url: SITE_URL,
     logo: `${SITE_URL}/assets/icon-512.png`,
     image: `${SITE_URL}/assets/og-image.png`,
     description: t.brand.description,
-    foundingDate: BRAND_FIXED.since,
     email: BRAND_FIXED.email,
     telephone: BRAND_FIXED.legal.tel,
+    sameAs: [whatsappLink()],
     slogan: t.brand.tagline,
-    address: [
-      { '@type': 'PostalAddress', name: 'HQ / Factory', streetAddress: BRAND_FIXED.legal.address, addressCountry: 'KR' },
-      { '@type': 'PostalAddress', name: 'Office', streetAddress: BRAND_FIXED.legal.addressOffice, addressCountry: 'KR' },
-    ],
+    /* address 는 실제 법인 정보가 확정된 뒤 추가합니다.
+       placeholder 를 구조화 데이터에 넣으면 검색엔진이 그대로 읽어갑니다.
+       countryOfOrigin 만 남겨 지역 신호는 유지합니다. */
     areaServed: [{ '@type': 'Country', name: 'South Korea' }, { '@type': 'Place', name: 'Worldwide' }],
     knowsAbout: [
       'silicone injection molding',
@@ -50,8 +49,16 @@ export default function StructuredData({ locale }: { locale: Locale }) {
       },
     })),
     contactPoint: [
-      { '@type': 'ContactPoint', contactType: 'sales', email: BRAND_FIXED.email, availableLanguage: ['ko', 'en', 'zh'], areaServed: 'Worldwide' },
-      { '@type': 'ContactPoint', contactType: 'technical support', email: BRAND_FIXED.emailTech, availableLanguage: ['ko', 'en', 'zh'] },
+      {
+        '@type': 'ContactPoint',
+        contactType: 'sales',
+        email: BRAND_FIXED.email,
+        telephone: BRAND_FIXED.legal.tel,
+        url: whatsappLink(),
+        contactOption: 'https://schema.org/TollFree',
+        availableLanguage: ['ko', 'en', 'zh'],
+        areaServed: 'Worldwide',
+      },
     ],
   };
 

@@ -69,15 +69,23 @@ export default function Header() {
           <div className="flex h-16 items-center justify-between gap-4 lg:h-[68px]">
             <a
               href={localePath(locale, '/')}
-              className="flex shrink-0 items-baseline gap-3"
+              /* 로고 높이(22px)가 곧 링크 높이가 되면 터치 영역이 24px 미만이 됩니다.
+                 최소 40px 을 확보하고 로고는 그 안에서 수직 중앙 정렬합니다. */
+              className="flex min-h-[40px] shrink-0 items-center gap-3"
               aria-label={t.meta.siteName}
             >
-              <span
-                className="font-bold ink"
-                style={{ fontSize: 18, letterSpacing: '.26em' }}
-              >
-                {BRAND_FIXED.name}
-              </span>
+              {/* 브랜드 로고 — 원본 색(블루+레드)을 그대로 사용합니다.
+                  UI 강조색은 딥틸로 유지하되, 로고는 별도 색으로 두어
+                  브랜드 자산이 인터페이스 색에 묻히지 않게 했습니다. */}
+              <img
+                src="/assets/logo-iuyu.png"
+                alt={BRAND_FIXED.name}
+                width={436}
+                height={130}
+                className="h-[22px] w-auto"
+                fetchPriority="high"
+                decoding="async"
+              />
               <span className="t-note hidden sm:inline">{t.brand.subline}</span>
             </a>
 
@@ -151,9 +159,13 @@ export default function Header() {
         />
         <div className="relative flex h-full flex-col px-6 pt-5">
           <div className="flex items-center justify-between">
-            <span className="font-bold ink" style={{ fontSize: 18, letterSpacing: '.26em' }}>
-              {BRAND_FIXED.name}
-            </span>
+            <img
+              src="/assets/logo-iuyu.png"
+              alt={BRAND_FIXED.name}
+              width={436}
+              height={130}
+              className="h-[22px] w-auto"
+            />
             <div className="flex items-center gap-2">
               <LanguageSwitcher compact />
               <button

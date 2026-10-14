@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { alternatesFor, localePath, type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/content/dictionaries';
-import { BRAND_FIXED } from '@/content/brand';
+import { BRAND_FIXED, whatsappLink } from '@/content/brand';
 import InquiryForm from '@/components/InquiryForm';
 import { PageHead, Reveal, SectionHead } from '@/components/primitives';
 
@@ -58,24 +58,25 @@ export default function ContactPage({ params }: { params: { locale: Locale } }) 
               <p className="t-note">{p.directLabel}</p>
               <dl className="mt-6 space-y-6">
                 <div>
-                  <dt className="t-note">{p.salesLabel}</dt>
+                  <dt className="t-note">{p.whatsappLabel}</dt>
+                  <dd className="mt-2">
+                    <a
+                      href={whatsappLink()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-draw foot-link t-sm t-num font-medium ink"
+                    >
+                      {BRAND_FIXED.whatsapp.display}
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt className="t-note">{p.emailLabel}</dt>
                   <dd className="mt-2">
                     <a href={`mailto:${BRAND_FIXED.email}`} className="link-draw foot-link t-sm font-medium ink">
                       {BRAND_FIXED.email}
                     </a>
                   </dd>
-                </div>
-                <div>
-                  <dt className="t-note">{p.techLabel}</dt>
-                  <dd className="mt-2">
-                    <a href={`mailto:${BRAND_FIXED.emailTech}`} className="link-draw foot-link t-sm font-medium ink">
-                      {BRAND_FIXED.emailTech}
-                    </a>
-                  </dd>
-                </div>
-                <div>
-                  <dt className="t-note">{p.telLabel}</dt>
-                  <dd className="t-num mt-2 text-[0.875rem] ink-2">{BRAND_FIXED.legal.tel}</dd>
                 </div>
                 <div>
                   <dt className="t-note">{p.hoursLabel}</dt>

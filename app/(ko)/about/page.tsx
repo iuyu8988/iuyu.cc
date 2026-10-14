@@ -17,21 +17,6 @@ export default function AboutPage() {
   const L = (path: string) => localePath(locale, path);
   const l = BRAND_FIXED.legal;
 
-  const bizValue: Record<string, string> = {
-    companyKo: l.companyKo,
-    companyEn: l.companyEn,
-    ceo: l.ceo,
-    bizNo: l.bizNo,
-    address: l.address,
-    addressOffice: l.addressOffice,
-    email: BRAND_FIXED.email,
-    emailTech: BRAND_FIXED.emailTech,
-    tel: l.tel,
-    hours: t.brand.hours,
-  };
-
-  const factoryValue = [l.factory.label, l.factory.area, l.factory.lines];
-
   return (
     <div className="shell pb-24">
       <PageHead
@@ -47,7 +32,6 @@ export default function AboutPage() {
         }
         lede={t.brand.description}
         meta={[
-          { k: 'SINCE', v: BRAND_FIXED.since },
           { k: 'SCOPE', v: 'SILICONE ACCESSORIES' },
         ]}
       />
@@ -89,23 +73,6 @@ export default function AboutPage() {
             </div>
           </Reveal>
 
-          <Reveal variant="rise" delay={200}>
-            <div className="tex tex-silicone relative overflow-hidden p-7" style={{ border: '1px solid var(--line)', borderRadius: 2 }}>
-              <div className="relative z-10">
-                <p className="t-note">{p.factoryLabel}</p>
-                <dl className="mt-5 space-y-3.5">
-                  {p.factoryRows.map((row, i) => (
-                    <div key={row} className="flex items-baseline justify-between gap-4 pb-3"
-                         style={{ borderBottom: i === p.factoryRows.length - 1 ? 'none' : '1px solid var(--line-soft)' }}>
-                      <dt className="t-note">{row}</dt>
-                      <dd className="t-num text-[0.875rem] font-semibold ink">{factoryValue[i]}</dd>
-                    </div>
-                  ))}
-                </dl>
-                <p className="t-sm mt-5 ink-3">{p.factoryNote}</p>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </section>
 
@@ -149,22 +116,6 @@ export default function AboutPage() {
             </Reveal>
           ))}
         </div>
-      </section>
-
-      {/* 사업자 정보 */}
-      <section className="mt-24">
-        <SectionHead index="B" eyebrow="REGISTRATION" title={p.bizH2} scale="minor" />
-        <Reveal variant="rise" delay={100}>
-          <dl className="mt-10 grid gap-x-12 sm:grid-cols-2">
-            {p.bizRows.map(([label, key]) => (
-              <div key={label} className="flex items-baseline justify-between gap-6 py-4"
-                   style={{ borderBottom: '1px solid var(--line-soft)' }}>
-                <dt className="t-note">{label}</dt>
-                <dd className="text-right text-[0.875rem] font-medium ink">{bizValue[key] ?? key}</dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
       </section>
 
       <PageFooterCta

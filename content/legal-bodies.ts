@@ -83,7 +83,7 @@ export const LEGAL_BODIES: Record<Locale, Record<string, LegalBody>> = {
           '해당 기록은 이용자 브라우저에만 저장되며 서버로 전송되지 않습니다.',
           '이용자는 브라우저 설정에서 저장을 거부할 수 있으며, 이 경우 고지가 매 방문 표시됩니다.'] },
         { h: '8. 개인정보 보호책임자', p: [
-          `성명: ${BRAND_FIXED.legal.ceo}`,
+          '성명: 개인정보 보호책임자',
           `연락처: ${EMAIL}`,
           '이용자는 개인정보 관련 문의, 불만, 피해 구제를 위 연락처로 요청할 수 있습니다.'] },
       ],
@@ -159,7 +159,7 @@ export const LEGAL_BODIES: Record<Locale, Record<string, LegalBody>> = {
         { h: '5. 제3자 권리 침해', p: [
           '고객이 제공한 도면·디자인이 제3자의 권리를 침해하는 경우 그 책임은 고객에게 있습니다.',
           '회사가 자체 설계로 공급한 제품이 제3자의 권리를 침해한다는 주장이 제기된 경우, 회사는 해당 제품의 공급 중단 및 대체 설계 제안 등의 조치를 합니다.'] },
-        { h: '6. 문의', p: [`지식재산권 관련 문의: ${BRAND_FIXED.emailTech}`] },
+        { h: '6. 문의', p: [`지식재산권 관련 문의: ${BRAND_FIXED.email}`] },
       ],
     },
   },
@@ -232,7 +232,7 @@ export const LEGAL_BODIES: Record<Locale, Record<string, LegalBody>> = {
           'That record is stored only in your browser and is never sent to a server.',
           'You may refuse storage in your browser settings; the notice will then be shown on every visit.'] },
         { h: '8. Data protection contact', p: [
-          `Name: ${BRAND_FIXED.legal.ceo}`,
+          'Name: Data Protection Officer',
           `Contact: ${EMAIL}`,
           'You may direct questions, complaints or requests for remedy regarding personal data to the contact above.'] },
       ],
@@ -308,7 +308,7 @@ export const LEGAL_BODIES: Record<Locale, Record<string, LegalBody>> = {
         { h: '5. Third-party rights', p: [
           'Responsibility for drawings or designs provided by the customer that infringe third-party rights rests with the customer.',
           'Where a product supplied from the Company\u2019s own design is alleged to infringe third-party rights, the Company will suspend supply and propose an alternative design.'] },
-        { h: '6. Contact', p: [`Intellectual property enquiries: ${BRAND_FIXED.emailTech}`] },
+        { h: '6. Contact', p: [`Intellectual property enquiries: ${BRAND_FIXED.email}`] },
       ],
     },
   },
@@ -381,7 +381,7 @@ export const LEGAL_BODIES: Record<Locale, Record<string, LegalBody>> = {
           '该记录仅保存在您的浏览器中，不会上传至服务器。',
           '您可以在浏览器设置中拒绝保存，此时每次访问都会显示该告知。'] },
         { h: '8. 个人信息保护负责人', p: [
-          `姓名：${BRAND_FIXED.legal.ceo}`,
+          '姓名：个人信息保护负责人',
           `联系方式：${EMAIL}`,
           '用户可通过上述联系方式提出个人信息相关的咨询、投诉或救济请求。'] },
       ],
@@ -457,7 +457,7 @@ export const LEGAL_BODIES: Record<Locale, Record<string, LegalBody>> = {
         { h: '5. 第三方权利侵害', p: [
           '客户提供的图纸或设计侵害第三方权利的，责任由客户承担。',
           '公司自主设计供应的产品被主张侵害第三方权利时，公司将停止该产品供应并提出替代设计方案。'] },
-        { h: '6. 联系方式', p: [`知识产权相关咨询：${BRAND_FIXED.emailTech}`] },
+        { h: '6. 联系方式', p: [`知识产权相关咨询：${BRAND_FIXED.email}`] },
       ],
     },
   },

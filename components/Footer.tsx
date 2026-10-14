@@ -1,6 +1,6 @@
 'use client';
 
-import { BRAND_FIXED } from '@/content/brand';
+import { BRAND_FIXED, whatsappLink } from '@/content/brand';
 import { localePath } from '@/lib/i18n';
 import { useLocale } from './LocaleProvider';
 import { Reveal } from './primitives';
@@ -12,28 +12,20 @@ export default function Footer() {
   const year = new Date().getFullYear();
   const l = BRAND_FIXED.legal;
 
-  const bizValue: Record<string, string> = {
-    companyKo: l.companyKo,
-    companyEn: l.companyEn,
-    ceo: l.ceo,
-    bizNo: l.bizNo,
-    address: l.address,
-    addressOffice: l.addressOffice,
-    email: BRAND_FIXED.email,
-    emailTech: BRAND_FIXED.emailTech,
-    tel: l.tel,
-    hours: t.brand.hours,
-  };
-
   return (
     <footer style={{ background: 'var(--surface)', borderTop: '1px solid var(--line)' }}>
       <div className="shell py-16 sm:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1.15fr] lg:gap-10">
           {/* 회사 개요 */}
           <div>
-            <p className="font-bold ink" style={{ fontSize: 18, letterSpacing: '.26em' }}>
-              {BRAND_FIXED.name}
-            </p>
+            <img
+              src="/assets/logo-iuyu.png"
+              alt={BRAND_FIXED.name}
+              width={436}
+              height={130}
+              className="h-[26px] w-auto"
+              loading="lazy"
+            />
             <p className="t-sm mt-5 max-w-[330px] text-pretty ink-3">{t.brand.description}</p>
 
             <div
@@ -81,7 +73,7 @@ export default function Footer() {
             <h3 className="t-note">{t.footer.contactLabel}</h3>
             <ul className="mt-6 space-y-5">
               <li>
-                <span className="t-note block">{t.pages.contact.salesLabel}</span>
+                <span className="t-note block">{t.pages.contact.emailLabel}</span>
                 <a
                   href={`mailto:${BRAND_FIXED.email}`}
                   className="link-draw foot-link t-sm mt-1.5 font-medium ink-2 hover:ink"
@@ -90,18 +82,17 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="t-note block">{t.pages.contact.techLabel}</span>
+                <span className="t-note block">{t.pages.contact.whatsappLabel}</span>
                 <a
-                  href={`mailto:${BRAND_FIXED.emailTech}`}
-                  className="link-draw foot-link t-sm mt-1.5 font-medium ink-2 hover:ink"
+                  href={whatsappLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-draw foot-link t-sm t-num mt-1.5 font-medium ink-2 hover:ink"
                 >
-                  {BRAND_FIXED.emailTech}
+                  {BRAND_FIXED.whatsapp.display}
                 </a>
               </li>
-              <li>
-                <span className="t-note block">{t.pages.contact.telLabel}</span>
-                <span className="t-sm t-num mt-1.5 block ink-2">{l.tel}</span>
-              </li>
+
               <li>
                 <span className="t-note block">{t.pages.contact.hoursLabel}</span>
                 <span className="t-sm mt-1.5 block ink-3">{t.brand.hours}</span>
@@ -110,19 +101,13 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* 법정 고지 */}
+        {/* 고지
+            주의: 사업자 정보(상호·등록번호·주소)는 의도적으로 표시하지 않습니다.
+            실제 법인 정보가 확정되면 이 자리에 추가하세요.
+            현재는 placeholder 를 노출하지 않는 편이 신뢰에 낫습니다. */}
         <Reveal variant="fade">
           <div className="mt-16 pt-8" style={{ borderTop: '1px solid var(--line)' }}>
-            <dl className="grid gap-x-10 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
-              {t.footer.bizRows.map(([label, key]) => (
-                <div key={label} className="flex gap-3">
-                  <dt className="t-note shrink-0 pt-[3px]">{label}</dt>
-                  <dd className="t-sm ink-2">{bizValue[key] ?? key}</dd>
-                </div>
-              ))}
-            </dl>
-
-            <div className="mt-9 rounded-sm p-5" style={{ background: 'var(--sunk)' }}>
+            <div className="rounded-sm p-5" style={{ background: 'var(--sunk)' }}>
               <p className="t-sm text-pretty ink-3">
                 <strong className="font-semibold ink">{t.footer.scopeTitle}.</strong>{' '}
                 {t.footer.serviceNote}
@@ -134,7 +119,7 @@ export default function Footer() {
                 © {year} {BRAND_FIXED.name}. {t.footer.rights}
               </p>
               <p className="t-note">
-                {t.footer.tagline} · SINCE {BRAND_FIXED.since}
+                {t.footer.tagline}
               </p>
             </div>
           </div>
