@@ -51,6 +51,18 @@ export const BRAND_FIXED = {
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://iuyu.cc';
 
+/* ── 소셜 채널 ───────────────────────────────────────────────────────
+   B2B 사이트라도 채널이 있으면 신뢰 신호가 됩니다 (특히 한국·동남아 바이어).
+   JSON-LD 의 sameAs 에도 그대로 들어가서 검색엔진이 '같은 실체'로 묶어 줍니다.
+
+   handle 은 @ 없이 저장하고, 링크 생성 시에만 붙입니다. */
+export const SOCIAL = [
+  { id: 'instagram', label: 'Instagram', handle: 'iuyu8988',  href: 'https://www.instagram.com/iuyu8988/' },
+  { id: 'tiktok',    label: 'TikTok',    handle: 'iuyu267',   href: 'https://www.tiktok.com/@iuyu267' },
+  { id: 'x',         label: 'X',         handle: 'iuyu8988',  href: 'https://x.com/iuyu8988' },
+  { id: 'youtube',   label: 'YouTube',   handle: 'iuyu-f1h',  href: 'https://www.youtube.com/@iuyu-f1h' },
+] as const;
+
 export const VERIFICATION = {
   google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
   naver: process.env.NEXT_PUBLIC_NAVER_SITE_VERIFICATION || '',

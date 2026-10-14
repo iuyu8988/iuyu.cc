@@ -445,6 +445,7 @@ const en: Dictionary = {
       formH2: 'Enquiry form',
       formNote: 'Marked fields are required. Fill in the rest as far as you know.',
       directLabel: 'Direct contact',
+      socialLabel: 'Social channels',
       whatsappLabel: 'WhatsApp',
       whatsappCta: 'Chat on WhatsApp',
       salesLabel: 'Sales · quotes',
@@ -506,6 +507,7 @@ const en: Dictionary = {
     menuLabel: 'MENU',
     policyLabel: 'POLICY',
     contactLabel: 'CONTACT',
+    socialLabel: 'CHANNELS',
     serviceNote:
       'IUYU is a B2B manufacturer of silicone protective cases, pouches and similar accessories for vape devices. We do not manufacture or sell nicotine liquid, pods, refills or finished devices, and we do not sell to consumers from this site.',
     rights: 'All rights reserved.',

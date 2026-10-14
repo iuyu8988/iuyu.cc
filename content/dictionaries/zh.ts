@@ -443,6 +443,7 @@ const zh: Dictionary = {
       formH2: '询价表单',
       formNote: '标注为必填的项目请完整填写，其余按您了解的填就好。',
       directLabel: '直接联系',
+      socialLabel: '社交媒体',
       whatsappLabel: 'WhatsApp',
       whatsappCta: '通过 WhatsApp 咨询',
       salesLabel: '业务 · 报价',
@@ -504,6 +505,7 @@ const zh: Dictionary = {
     menuLabel: 'MENU',
     policyLabel: 'POLICY',
     contactLabel: 'CONTACT',
+    socialLabel: 'CHANNELS',
     serviceNote:
       'IUYU 是制造与供应电子烟设备硅胶保护套、收纳袋等配件的 B2B 制造商。不制造也不销售尼古丁烟油、烟弹、补充装与设备整机，本站不面向消费者销售。',
     rights: 'All rights reserved.',

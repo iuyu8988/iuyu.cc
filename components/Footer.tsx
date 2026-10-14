@@ -3,6 +3,7 @@
 import { BRAND_FIXED, whatsappLink } from '@/content/brand';
 import { localePath } from '@/lib/i18n';
 import { useLocale } from './LocaleProvider';
+import SocialLinks from './SocialLinks';
 import { Reveal } from './primitives';
 
 const LEGAL_SLUGS = ['terms', 'privacy', 'youth', 'quality', 'ip'] as const;
@@ -96,6 +97,12 @@ export default function Footer() {
               <li>
                 <span className="t-note block">{t.pages.contact.hoursLabel}</span>
                 <span className="t-sm mt-1.5 block ink-3">{t.brand.hours}</span>
+              </li>
+
+              {/* 소셜 채널 — 실체 확인(신뢰) 신호 + JSON-LD sameAs 와 동일한 주소 */}
+              <li>
+                <span className="t-note block">{t.footer.socialLabel}</span>
+                <SocialLinks label={t.footer.socialLabel} className="mt-3" />
               </li>
             </ul>
           </div>

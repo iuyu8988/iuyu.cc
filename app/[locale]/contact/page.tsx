@@ -4,6 +4,7 @@ import { getDictionary } from '@/content/dictionaries';
 import { BRAND_FIXED, whatsappLink } from '@/content/brand';
 import InquiryForm from '@/components/InquiryForm';
 import { PageHead, Reveal, SectionHead } from '@/components/primitives';
+import SocialLinks from '@/components/SocialLinks';
 import { FaqStructuredData } from '@/components/StructuredData';
 
 export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
@@ -83,6 +84,15 @@ export default function ContactPage({ params }: { params: { locale: Locale } }) 
                 <div>
                   <dt className="t-note">{p.hoursLabel}</dt>
                   <dd className="t-sm mt-2 ink-3">{t.brand.hours}</dd>
+                </div>
+
+                {/* 소셜 채널 — 제품 실사·작업 영상을 올리는 곳이라
+                    문의 전에 실체를 확인하려는 바이어가 가장 많이 누릅니다. */}
+                <div>
+                  <dt className="t-note">{p.socialLabel}</dt>
+                  <dd className="mt-3">
+                    <SocialLinks label={p.socialLabel} />
+                  </dd>
                 </div>
               </dl>
             </div>

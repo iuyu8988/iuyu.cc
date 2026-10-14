@@ -1,4 +1,4 @@
-import { BRAND_FIXED, SITE_URL, whatsappLink } from '@/content/brand';
+import { BRAND_FIXED, SITE_URL, SOCIAL, whatsappLink } from '@/content/brand';
 import { LOCALE_META, type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/content/dictionaries';
 
@@ -24,7 +24,9 @@ export default function StructuredData({ locale }: { locale: Locale }) {
     description: t.brand.description,
     email: BRAND_FIXED.email,
     telephone: BRAND_FIXED.legal.tel,
-    sameAs: [whatsappLink()],
+    /* sameAs = '같은 실체'임을 검색엔진에 알리는 신호.
+       소셜 채널과 WhatsApp 을 함께 넣어 지식패널 연결에 쓰이게 합니다. */
+    sameAs: [...SOCIAL.map((s) => s.href), whatsappLink()],
     slogan: t.brand.tagline,
     /* address 는 실제 법인 정보가 확정된 뒤 추가합니다.
        placeholder 를 구조화 데이터에 넣으면 검색엔진이 그대로 읽어갑니다.

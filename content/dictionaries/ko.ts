@@ -446,6 +446,7 @@ const ko = {
       formH2: '문의 양식',
       formNote: '표시된 항목은 필수입니다. 나머지는 아는 범위까지만 적어주셔도 됩니다.',
       directLabel: '직접 연락',
+      socialLabel: '소셜 채널',
       whatsappLabel: 'WhatsApp',
       whatsappCta: 'WhatsApp 으로 문의',
       salesLabel: '영업 · 견적',
@@ -507,6 +508,7 @@ const ko = {
     menuLabel: 'MENU',
     policyLabel: 'POLICY',
     contactLabel: 'CONTACT',
+    socialLabel: 'CHANNELS',
     serviceNote:
       'IUYU는 전자담배 기기용 실리콘 보호케이스·파우치 등 액세서리를 제조·공급하는 B2B 제조사입니다. 니코틴 액상, 팟, 리필, 기기 완제품은 제조·판매하지 않으며, 본 사이트에서 소비자 대상 판매를 하지 않습니다.',
     rights: 'All rights reserved.',
