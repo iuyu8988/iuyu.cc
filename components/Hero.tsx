@@ -89,7 +89,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(ellipse 58% 52% at 68% 42%, rgba(255,255,255,.92) 0%, rgba(255,255,255,.45) 46%, rgba(242,243,245,0) 78%)',
+              'radial-gradient(ellipse 58% 52% at 32% 42%, rgba(255,255,255,.92) 0%, rgba(255,255,255,.45) 46%, rgba(242,243,245,0) 78%)',
           }}
         />
         <div
@@ -114,9 +114,12 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="grid items-center gap-12 py-12 lg:grid-cols-[minmax(0,1.22fr)_minmax(0,1fr)] lg:gap-14 lg:py-16">
-          {/* ── 좌: 주장 ── */}
-          <div className="relative z-10" style={{ transform: `translate3d(${dx * 6}px, ${dy * 6}px, 0)` }}>
+        {/* 도면 시트 배치: 데스크톱은 도면(좌) · 주장(우), 모바일은 주장이 먼저 옵니다.
+            DOM 순서는 그대로 두고 order 로만 바꿔서, 작은 화면에서 헤드라인이
+            제품 사진보다 먼저 읽히게 유지합니다. */}
+        <div className="grid items-center gap-12 py-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.22fr)] lg:gap-14 lg:py-16">
+          {/* ── 우측(데스크톱): 주장 ── */}
+          <div className="relative z-10 lg:order-2" style={{ transform: `translate3d(${dx * 6}px, ${dy * 6}px, 0)` }}>
             <Enter variant="fade">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="tag tag-accent">{t.hero.chips[0]}</span>
@@ -162,9 +165,9 @@ export default function Hero() {
             </Enter>
           </div>
 
-          {/* ── 우: 제품 도면 ── */}
+          {/* ── 좌측(데스크톱): 제품 도면 ── */}
           <div
-            className="relative"
+            className="relative lg:order-1"
             style={{ transform: `translate3d(${dx * -16}px, ${dy * -16 + scrollY * -16}px, 0)` }}
           >
             <Enter variant="unmask" delay={180}>
