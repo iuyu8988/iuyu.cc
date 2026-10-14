@@ -12,7 +12,8 @@
     "qa": "node scripts/qa.mjs",
     "photos": "python3 scripts/prepare-photos.py",
     "deploy": "bash scripts/deploy.sh",
-    "ssl": "bash scripts/enable-ssl.sh"
+    "ssl": "bash scripts/enable-ssl.sh",
+    "pack": "bash scripts/package.sh"
   },
   "dependencies": {
     "next": "^14.2.15",
