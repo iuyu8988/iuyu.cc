@@ -61,6 +61,10 @@ export const SOCIAL = [
   { id: 'tiktok',    label: 'TikTok',    handle: 'iuyu267',   href: 'https://www.tiktok.com/@iuyu267' },
   { id: 'x',         label: 'X',         handle: 'iuyu8988',  href: 'https://x.com/iuyu8988' },
   { id: 'youtube',   label: 'YouTube',   handle: 'iuyu-f1h',  href: 'https://www.youtube.com/@iuyu-f1h' },
+  /* Telegram 은 한국에서는 거의 쓰지 않습니다(주로 크립토·익명 채널).
+     그래도 중동·중남미·동남아 바이어는 Telegram 을 선호하는 경우가 있어
+     함께 노출합니다. 아이콘 순서는 위 4개 뒤에 둡니다. */
+  { id: 'telegram',  label: 'Telegram',  handle: 'iuyu8988',  href: 'https://t.me/iuyu8988' },
 ] as const;
 
 export const VERIFICATION = {
