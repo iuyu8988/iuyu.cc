@@ -97,8 +97,8 @@ export default function StructuredData({ locale }: { locale: Locale }) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: t.common.home, item: `${SITE_URL}/` },
-      { '@type': 'ListItem', position: 2, name: t.nav[1].label, item: `${SITE_URL}/capabilities/` },
-      { '@type': 'ListItem', position: 3, name: t.nav[5].label, item: `${SITE_URL}/contact/` },
+      { '@type': 'ListItem', position: 2, name: t.nav.find((n) => n.href === '/capabilities/')?.label ?? '', item: `${SITE_URL}/capabilities/` },
+      { '@type': 'ListItem', position: 3, name: t.nav.find((n) => n.href === '/contact/')?.label ?? '', item: `${SITE_URL}/contact/` },
     ],
   };
 

@@ -40,6 +40,8 @@ const PAGES = [
   { p: '/oem/',           n: 'd06-oem-ko',         w: W.desk, full: true },
   { p: '/about/',         n: 'd07-about-ko',       w: W.desk, full: true },
   { p: '/contact/',       n: 'd08-contact-ko',     w: W.desk, full: true },
+  { p: '/social/',        n: 'd11-social-ko',      w: W.desk, full: true },
+  { p: '/social/',        n: 'm04-social-ko',      w: W.mob,  full: true, dpr: 2 },
   { p: '/en/contact/',    n: 'd09-contact-en',     w: W.desk, full: true },
   { p: '/zh/legal/ip/',   n: 'd10-legal-ip-zh',    w: W.desk, full: true },
   // 태블릿

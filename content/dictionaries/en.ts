@@ -31,6 +31,7 @@ const en: Dictionary = {
     { href: '/products/', label: 'Products' },
     { href: '/oem/', label: 'Process' },
     { href: '/about/', label: 'About' },
+    { href: '/social/', label: 'Channels' },
     { href: '/contact/', label: 'Contact' },
   ],
 
@@ -307,6 +308,11 @@ const en: Dictionary = {
       'This site is a B2B manufacturing enquiry channel and its content is intended for business partners. Product images show actual production output; specifications may change through consultation. Items marked as placeholders will be updated once the real data is confirmed.',
   },
 
+  retail: {
+    text: 'For individual purchases, please get in touch using the contact channels below.',
+    cta: 'Contact us',
+  },
+
   cta: {
     eyebrow: 'START A PROJECT',
     h2Line1: 'Tell us the device model and the form.',
@@ -459,7 +465,18 @@ const en: Dictionary = {
       scopeLabel: 'Scope of business',
       scopeBody:
         'IUYU manufactures silicone protective cases, pouches and similar accessories only. We do not respond to enquiries about nicotine liquid, pods, refills or finished devices.',
+    },    social: {
+      title: 'Social Channels — Silicone Case Manufacturing',
+      description:
+        'IUYU on Instagram, TikTok, X, YouTube and Telegram. Product photos, production footage and new releases, gathered in one place.',
+      h1Line1: 'See the factory',
+      h1Line2: 'for yourself.',
+      lede:
+        'We post product photos and production footage across our channels. Before you enquire, take a look at what we actually make. Each channel covers something a little different.',
+      followLabel: 'Open channel',
+      note: 'Posting frequency varies by channel. For quotes, please use the contact page.',
     },
+
   },
 
   form: {
@@ -490,6 +507,7 @@ const en: Dictionary = {
     requiredError: 'Please complete all required fields.',
     sentNote: 'If your mail client does not open, please email {EMAIL} directly. The form backend is connected at deployment.',
     mailSubjectPrefix: '[IUYU] Quote enquiry — ',
+
     labels: {
       company: 'Company',
       name: 'Contact',
@@ -528,6 +546,7 @@ const en: Dictionary = {
     mobileCta: 'Enquire',
     desktopCta: 'Request a quote',
     whatsapp: 'Chat on WhatsApp',
+    social: 'View channels',
   },
 
   legal: {

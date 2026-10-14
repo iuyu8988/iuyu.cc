@@ -11,6 +11,7 @@ const PATHS = [
   { path: '/oem/', priority: 0.85, freq: 'monthly' as const },
   { path: '/contact/', priority: 0.8, freq: 'yearly' as const },
   { path: '/about/', priority: 0.6, freq: 'yearly' as const },
+  { path: '/social/', priority: 0.5, freq: 'weekly' as const },
   { path: '/legal/quality/', priority: 0.45, freq: 'yearly' as const },
   { path: '/legal/ip/', priority: 0.45, freq: 'yearly' as const },
   { path: '/legal/terms/', priority: 0.3, freq: 'yearly' as const },

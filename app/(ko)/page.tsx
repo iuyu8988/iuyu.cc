@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { alternatesFor } from '@/lib/i18n';
 import { getDictionary } from '@/content/dictionaries';
 import Hero from '@/components/Hero';
-import { Factory } from '@/components/Sections';
+import { Factory, RetailNotice } from '@/components/Sections';
 
 /**
  * 홈은 랜딩 한 장입니다 — 히어로 + 설비/라인 실사.
@@ -28,6 +28,8 @@ export default function HomePage() {
     <>
       <Hero />
       <Factory />
+      {/* 개별 구매 안내 — 푸터 연락처 바로 위에 옵니다 */}
+      <RetailNotice />
     </>
   );
 }

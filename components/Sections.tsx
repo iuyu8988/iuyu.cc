@@ -838,3 +838,33 @@ export function KeywordBand() {
   ];
   return <Marquee items={items} />;
 }
+
+/* ─────────────── 개별 구매 안내 (홈 전용) ─────────────── */
+/* 홈 마지막 섹션과 푸터 사이에 한 줄로 들어갑니다.
+   '아래 연락처'라고 쓰므로 푸터의 연락처 블록보다 위에 있어야 합니다. */
+
+export function RetailNotice() {
+  const { t, locale } = useLocale();
+  const r = t.retail;
+
+  return (
+    <section style={{ paddingBlock: 'clamp(2.5rem, 5vw, 4rem)' }}>
+      <div className="shell">
+        <Reveal variant="rise">
+          {/* 우측 하단은 플로팅 버튼(WhatsApp·소셜·견적)이 차지합니다.
+              그래서 이 블록은 왼쪽 정렬로 두고, 데스크톱에서는 오른쪽에
+              플로팅 폭(약 12rem)만큼 여백을 비워 겹치지 않게 합니다. */}
+          <div
+            className="flex flex-col items-start gap-5 lg:pr-52"
+            style={{ borderTop: '1px solid var(--line)', paddingTop: '1.75rem' }}
+          >
+            <p className="t-body max-w-[46rem] text-pretty ink-2">{r.text}</p>
+            <a href={localePath(locale, '/contact/')} className="btn btn-line !py-2.5 !text-[0.8125rem]">
+              {r.cta}
+            </a>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}

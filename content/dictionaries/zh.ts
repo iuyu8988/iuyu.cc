@@ -31,6 +31,7 @@ const zh: Dictionary = {
     { href: '/products/', label: '产品线' },
     { href: '/oem/', label: '代工流程' },
     { href: '/about/', label: '公司介绍' },
+    { href: '/social/', label: '社交渠道' },
     { href: '/contact/', label: '询价' },
   ],
 
@@ -305,6 +306,11 @@ const zh: Dictionary = {
       '本站是 B2B 制造询价渠道，所载信息面向企业客户。产品图片均为实际生产产品实拍，规格可能随协商调整。标注为占位的数据将在确认后更新。',
   },
 
+  retail: {
+    text: '如需单独购买，可通过下方联系方式与我们沟通。',
+    cta: '联系我们',
+  },
+
   cta: {
     eyebrow: 'START A PROJECT',
     h2Line1: '告诉我们机型与形态就可以，',
@@ -457,7 +463,18 @@ const zh: Dictionary = {
       scopeLabel: '经营范围说明',
       scopeBody:
         'IUYU 只制造硅胶保护套、收纳袋等配件。关于尼古丁烟油、烟弹、补充装、设备整机的咨询恕不接待。',
+    },    social: {
+      title: '社交媒体 — 硅胶保护壳制造现场',
+      description:
+        'IUYU 的 Instagram、TikTok、X、YouTube、Telegram 渠道汇总。产品实拍、生产现场与新品动态，可按渠道查看。',
+      h1Line1: '制造现场，',
+      h1Line2: '直接给您看。',
+      lede:
+        '我们在各渠道发布产品实拍与生产现场视频。询价之前，不妨先看看我们实际在做什么产品。各渠道侧重略有不同。',
+      followLabel: '打开渠道',
+      note: '各渠道更新频率可能不同。报价咨询请使用询价页面。',
     },
+
   },
 
   form: {
@@ -488,6 +505,7 @@ const zh: Dictionary = {
     requiredError: '请填写所有必填项目。',
     sentNote: '如果邮件客户端没有打开，请直接发送至 {EMAIL}。表单提交后端将在部署时接入。',
     mailSubjectPrefix: '[IUYU] 报价咨询 — ',
+
     labels: {
       company: '公司',
       name: '联系人',
@@ -526,6 +544,7 @@ const zh: Dictionary = {
     mobileCta: '立即咨询',
     desktopCta: '索取报价',
     whatsapp: '通过 WhatsApp 咨询',
+    social: '查看社交渠道',
   },
 
   legal: {
