@@ -337,6 +337,9 @@ export function Process() {
 export function Factory() {
   const { t, locale } = useLocale();
   const f = t.factory;
+  /* 홈이 히어로 + 이 섹션만 남았습니다. 인덱스는 다른 페이지의 내부 섹션과
+     같은 규칙(A·B·C)을 따릅니다 — 히어로가 이미 SHEET 01 이라 숫자를 쓰면
+     시트 번호와 겹쳐 보입니다. */
 
   return (
     <section
@@ -351,7 +354,7 @@ export function Factory() {
     >
       <div className="shell">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
-          <SectionHead index="04" eyebrow={f.eyebrow} title={f.h2} lede={f.lede} />
+          <SectionHead index="A" eyebrow={f.eyebrow} title={f.h2} lede={f.lede} />
           <Reveal variant="fade" delay={220}>
             <dl className="flex gap-8 lg:pb-1">
               {f.stat.map((st) => (

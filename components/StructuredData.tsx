@@ -90,17 +90,6 @@ export default function StructuredData({ locale }: { locale: Locale }) {
     })),
   };
 
-  const faq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    inLanguage: meta.htmlLang,
-    mainEntity: t.faq.items.map((it) => ({
-      '@type': 'Question',
-      name: it.q,
-      acceptedAnswer: { '@type': 'Answer', text: it.a },
-    })),
-  };
-
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -113,7 +102,7 @@ export default function StructuredData({ locale }: { locale: Locale }) {
 
   return (
     <>
-      {[org, website, services, faq, breadcrumb].map((data, i) => (
+      {[org, website, services, breadcrumb].map((data, i) => (
         <script
           key={i}
           type="application/ld+json"
@@ -122,5 +111,33 @@ export default function StructuredData({ locale }: { locale: Locale }) {
         />
       ))}
     </>
+  );
+}
+
+/**
+ * FAQPage 는 「그 페이지에 실제로 보이는 질문·답변」에만 붙여야 합니다.
+ * 홈에서 FAQ 섹션을 내리면서 전역 방출을 걷어내고, FAQ 를 실제로 렌더하는
+ * /oem/ · /contact/ 에서만 이 컴포넌트를 씁니다.
+ * (보이지 않는 내용에 붙은 FAQPage 는 구글 구조화 데이터 정책 위반입니다.)
+ */
+export function FaqStructuredData({ locale }: { locale: Locale }) {
+  const t = getDictionary(locale);
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: LOCALE_META[locale].htmlLang,
+    mainEntity: t.faq.items.map((it) => ({
+      '@type': 'Question',
+      name: it.q,
+      acceptedAnswer: { '@type': 'Answer', text: it.a },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      // eslint-disable-next-line react/no-danger
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
   );
 }

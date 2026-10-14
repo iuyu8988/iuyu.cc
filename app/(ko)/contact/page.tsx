@@ -4,6 +4,7 @@ import { getDictionary } from '@/content/dictionaries';
 import { BRAND_FIXED, whatsappLink } from '@/content/brand';
 import InquiryForm from '@/components/InquiryForm';
 import { PageHead, Reveal, SectionHead } from '@/components/primitives';
+import { FaqStructuredData } from '@/components/StructuredData';
 
 export function generateMetadata(): Metadata {
   const t = getDictionary('ko').pages.contact;
@@ -19,6 +20,7 @@ export default function ContactPage() {
 
   return (
     <div className="shell pb-24">
+      <FaqStructuredData locale={locale} />
       <PageHead
         sheet="06"
         path="IUYU / CONTACT"

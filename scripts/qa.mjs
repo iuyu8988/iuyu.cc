@@ -61,6 +61,29 @@ await send('Page.enable'); await send('Runtime.enable');
 await send('Emulation.setDeviceMetricsOverride', { width: 1440, height: 900, deviceScaleFactor: 1, mobile: false });
 await send('Page.navigate', { url: BASE + '/' }); await wait(1800);
 
+/* 프리플라이트 — 서버가 죽어 있으면 브라우저가 프록시 차단 페이지를 렌더하고,
+   QA 는 그 엉뚱한 페이지를 채점해 없는 문제를 만들어냅니다.
+   (실제로 한 번 겪었습니다.) 그래서 우리 사이트가 맞는지 먼저 확인합니다. */
+const probe = await send('Runtime.evaluate', { returnByValue: true, expression: `(() => {
+  const html = document.documentElement.outerHTML;
+  return JSON.stringify({
+    url: location.href,
+    marker: html.includes('FIG. 01') || html.includes('IUYU'),
+    title: document.title,
+  });
+})()` });
+{
+  const info = JSON.parse(probe.result.result.value);
+  if (!info.marker) {
+    console.error(`\n중단: ${BASE} 에서 IUYU 페이지를 받지 못했습니다.`);
+    console.error(`  실제로 로드된 URL : ${info.url}`);
+    console.error(`  문서 제목        : ${info.title}`);
+    console.error(`  → 정적 서버가 떠 있는지 확인하세요:  npx serve out -l 4330`);
+    proc.kill();
+    process.exit(2);
+  }
+}
+
 const tok = await send('Runtime.evaluate', { returnByValue: true, expression: `(() => {
   const cs = getComputedStyle(document.documentElement);
   const g = v => cs.getPropertyValue(v).trim();

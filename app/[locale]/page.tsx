@@ -2,21 +2,12 @@ import type { Metadata } from 'next';
 import { alternatesFor, type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/content/dictionaries';
 import Hero from '@/components/Hero';
-import {
-  KeywordBand,
-  SummaryBand,
-  CapabilityGrid,
-  Materials,
-  Process,
-  EquipmentQuality,
-  Factory,
-  Lines,
-  Stats,
-  HowToStart,
-  ScopeNotice,
-  Faq,
-  CtaBand,
-} from '@/components/Sections';
+import { Factory } from '@/components/Sections';
+
+/**
+ * 홈은 랜딩 한 장입니다 — 히어로 + 설비/라인 실사. (ko 홈과 동일한 구성)
+ * 나머지 섹션은 각 하위 페이지가 담당하므로 여기서는 펼치지 않습니다.
+ */
 
 export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
   const t = getDictionary(params.locale);
@@ -32,19 +23,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <KeywordBand />
-      <SummaryBand />
-      <CapabilityGrid />
-      <Materials />
-      <Process />
-      <EquipmentQuality />
       <Factory />
-      <Lines />
-      <Stats />
-      <HowToStart />
-      <ScopeNotice />
-      <Faq />
-      <CtaBand />
     </>
   );
 }

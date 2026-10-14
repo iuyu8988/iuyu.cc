@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { alternatesFor, localePath } from '@/lib/i18n';
 import { getDictionary } from '@/content/dictionaries';
 import { PageHead, Reveal, SectionHead } from '@/components/primitives';
+import { FaqStructuredData } from '@/components/StructuredData';
 
 export function generateMetadata(): Metadata {
   const t = getDictionary('ko').pages.oem;
@@ -17,6 +18,7 @@ export default function OemPage() {
 
   return (
     <div className="shell pb-24">
+      <FaqStructuredData locale={locale} />
       <PageHead
         sheet="04"
         path="IUYU / PROCESS"
