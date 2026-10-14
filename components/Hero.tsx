@@ -114,12 +114,13 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* 도면 시트 배치: 데스크톱은 도면(좌) · 주장(우), 모바일은 주장이 먼저 옵니다.
-            DOM 순서는 그대로 두고 order 로만 바꿔서, 작은 화면에서 헤드라인이
-            제품 사진보다 먼저 읽히게 유지합니다. */}
+        {/* 도면 시트 배치: 두 폭 모두 제품 도면이 먼저 옵니다.
+            모바일 — 도면(위) → 주장(아래) / 데스크톱 — 도면(좌) · 주장(우).
+            DOM 은 h1 이 먼저 오도록 그대로 두고 order 로만 시각 순서를 맞춥니다
+            (검색엔진·스크린리더는 제목을 먼저 읽습니다). */}
         <div className="grid items-center gap-12 py-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.22fr)] lg:gap-14 lg:py-16">
-          {/* ── 우측(데스크톱): 주장 ── */}
-          <div className="relative z-10 lg:order-2" style={{ transform: `translate3d(${dx * 6}px, ${dy * 6}px, 0)` }}>
+          {/* ── 주장 ── */}
+          <div className="relative z-10 order-2" style={{ transform: `translate3d(${dx * 6}px, ${dy * 6}px, 0)` }}>
             <Enter variant="fade">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="tag tag-accent">{t.hero.chips[0]}</span>
@@ -165,9 +166,9 @@ export default function Hero() {
             </Enter>
           </div>
 
-          {/* ── 좌측(데스크톱): 제품 도면 ── */}
+          {/* ── 제품 도면 ── */}
           <div
-            className="relative lg:order-1"
+            className="relative order-1"
             style={{ transform: `translate3d(${dx * -16}px, ${dy * -16 + scrollY * -16}px, 0)` }}
           >
             <Enter variant="unmask" delay={180}>
