@@ -53,9 +53,9 @@ const en: Dictionary = {
     scopeTitle: 'What we make',
     scopeItems: ['Silicone protective cases', 'Pouches / grips', 'Device protection accessories'],
     outOfScopeTitle: 'What we do not make',
-    outOfScopeItems: ['Nicotine liquid / pods / refills', 'Finished device units', 'Consumer online sales'],
+    outOfScopeItems: ['Nicotine liquid / pods / refills', 'Finished device units'],
     body:
-      'This site is a B2B manufacturing enquiry channel. We do not sell to consumers. Information here is intended for business partners aged 19 and over.',
+      'This site is a channel for silicone accessory manufacturing and supply. Information here is intended for adults aged 19 and over.',
     accept: 'I understand',
     privacyNote: 'This acknowledgement is stored only in your browser and is never sent to a server.',
   },
@@ -300,7 +300,7 @@ const en: Dictionary = {
     title: 'Scope of business',
     inTitle: 'What we manufacture and supply',
     inBody:
-      'Silicone protective cases, pouches and grips for vape devices, plus related protection accessories. B2B supply only, on an OEM/ODM basis. We do not sell directly to consumers.',
+      'Silicone protective cases, pouches and grips for vape devices, plus related protection accessories. Primarily B2B supply on an OEM/ODM basis; small individual orders are also welcome.',
     outTitle: 'What we do not manufacture or sell',
     outBody:
       'Nicotine liquid, pods, refills, and finished devices (both heated-tobacco and liquid types). We do not handle these categories at all, and do not advertise or sell them online.',
@@ -527,7 +527,7 @@ const en: Dictionary = {
     contactLabel: 'CONTACT',
     socialLabel: 'CHANNELS',
     serviceNote:
-      'IUYU is a B2B manufacturer of silicone protective cases, pouches and similar accessories for vape devices. We do not manufacture or sell nicotine liquid, pods, refills or finished devices, and we do not sell to consumers from this site.',
+      'IUYU is a B2B manufacturer of silicone protective cases, pouches and similar accessories for vape devices. We do not manufacture or sell nicotine liquid, pods, refills or finished devices.',
     rights: 'All rights reserved.',
     tagline: 'OEM/ODM manufacturing of vape accessories',
     bizRows: [

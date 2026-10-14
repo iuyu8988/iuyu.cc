@@ -53,9 +53,9 @@ const zh: Dictionary = {
     scopeTitle: '经营范围',
     scopeItems: ['硅胶保护套', '收纳袋 / 握把套', '设备防护配件'],
     outOfScopeTitle: '不涉及的产品',
-    outOfScopeItems: ['尼古丁烟油 / 烟弹 / 补充装', '设备整机', '面向消费者的线上零售'],
+    outOfScopeItems: ['尼古丁烟油 / 烟弹 / 补充装', '设备整机'],
     body:
-      '本站是 B2B 制造询价渠道，不面向消费者销售。本站信息面向 19 岁以上的企业客户。',
+      '本站是硅胶配件的制造与供应渠道。本站信息面向 19 岁以上成年人。',
     accept: '我已了解',
     privacyNote: '该确认记录仅保存在您的浏览器中，不会上传至服务器。',
   },
@@ -298,7 +298,7 @@ const zh: Dictionary = {
     title: '经营范围与声明',
     inTitle: '我们制造与供应的产品',
     inBody:
-      '电子烟设备用硅胶保护套、收纳袋、握把套及设备防护配件。仅以 OEM/ODM 方式对 B 端供货，不面向消费者直接销售。',
+      '电子烟设备用硅胶保护套、收纳袋、握把套及设备防护配件。以 OEM/ODM 方式对 B 端供货为主，也接受少量个人购买咨询。',
     outTitle: '我们不制造也不销售的产品',
     outBody:
       '尼古丁烟油、烟弹、补充装，以及加热不燃烧型与雾化型设备整机。相关品类一律不涉及，也不做线上销售与广告。',
@@ -525,7 +525,7 @@ const zh: Dictionary = {
     contactLabel: 'CONTACT',
     socialLabel: 'CHANNELS',
     serviceNote:
-      'IUYU 是制造与供应电子烟设备硅胶保护套、收纳袋等配件的 B2B 制造商。不制造也不销售尼古丁烟油、烟弹、补充装与设备整机，本站不面向消费者销售。',
+      'IUYU 是制造与供应电子烟设备硅胶保护套、收纳袋等配件的 B2B 制造商。不制造也不销售尼古丁烟油、烟弹、补充装与设备整机。',
     rights: 'All rights reserved.',
     tagline: '电子烟配件 OEM/ODM 制造',
     bizRows: [
