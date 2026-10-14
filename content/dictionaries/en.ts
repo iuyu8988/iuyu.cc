@@ -310,7 +310,7 @@ const en: Dictionary = {
 
   retail: {
     text: 'For individual purchases, please get in touch using the contact channels below.',
-    cta: 'Contact us',
+    cta: 'Contact us on a channel',
   },
 
   cta: {

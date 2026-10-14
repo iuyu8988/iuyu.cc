@@ -308,7 +308,7 @@ const zh: Dictionary = {
 
   retail: {
     text: '如需单独购买，可通过下方联系方式与我们沟通。',
-    cta: '联系我们',
+    cta: '通过渠道联系我们',
   },
 
   cta: {

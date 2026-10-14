@@ -859,7 +859,10 @@ export function RetailNotice() {
             style={{ borderTop: '1px solid var(--line)', paddingTop: '1.75rem' }}
           >
             <p className="t-body max-w-[46rem] text-pretty ink-2">{r.text}</p>
-            <a href={localePath(locale, '/contact/')} className="btn btn-line !py-2.5 !text-[0.8125rem]">
+            {/* 문의 페이지가 아니라 소셜 채널 모음으로 보냅니다.
+                개별 구매 문의는 채널(DM)로 받는 흐름이라, 견적 폼으로
+                보내면 개인 고객에게는 오히려 진입 장벽이 됩니다. */}
+            <a href={localePath(locale, '/social/')} className="btn btn-line !py-2.5 !text-[0.8125rem]">
               {r.cta}
             </a>
           </div>
